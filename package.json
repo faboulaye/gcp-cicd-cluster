@@ -1,0 +1,23 @@
+{
+  "name": "gcp-cicd-cluster",
+  "version": "1.0.0",
+  "description": "CI/CD on google cloud platform",
+  "main": "index.js",
+  "scripts": {
+    "tf:init": "terraform init src/terraform/gke",
+    "tf:plan": "terraform plan src/terraform/gke",
+    "tf:apply": "terraform apply src/terraform/gke",
+    "tf:destroy": "terraform destroy src/terraform/gke",
+    "ns:jenkins": "kubectl create namespace jenkins",
+    "jenkins": "kubectl create -f src/k8s/jenkins"
+  },
+  "keywords": [
+    "CI/CD",
+    "Terraform",
+    "Google cloud",
+    "Jenkins",
+    "Kubernetes"
+  ],
+  "author": "Firdaws Aboulaye",
+  "license": "ISC"
+}
